@@ -212,7 +212,7 @@ bullet("모델: 다층 퍼셉트론(MLP) — Dense(128)-Dense(128)-Dropout(0.2)-
 bullet("손실함수 MAPE, 최적화기 Adam(lr=1e-3), 입력 Min-Max 정규화, 데이터 분할 70/15/15(train/val/test), EarlyStopping 적용.")
 one_image(os.path.join(DS, "E_mape_curve.png"), "그림 4. Epoch에 따른 MAPE 변화 곡선 (Training/Validation)", w=11.0)
 body("[학습 과정 해석] 그림 4의 MAPE 곡선은 학습이 진행되는 동안 모델의 거동을 단계적으로 보여 준다. "
-     "①(초기 급감, 약 0~10 epoch) Training MAPE는 약 61%, Validation MAPE는 약 22%에서 출발하여 불과 "
+     "①(초기 급감, 약 0~10 epoch) Training MAPE는 약 61%, Validation MAPE는 약 23%에서 출발하여 불과 "
      "십여 epoch 만에 수 % 수준으로 급격히 감소한다. 이는 신경망이 입력 변수와 탄성계수 사이의 가장 지배적인 "
      "관계(특히 제하 강성과 E의 비례 관계)를 매우 빠르게 학습함을 의미한다. ②(최적 일반화 시점) 검증 MAPE는 "
      "약 11 epoch에서 최저(약 1.21%)에 도달하여, 모델이 처음 보는 데이터에 대해 가장 잘 일반화되는 지점이 "
